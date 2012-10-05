@@ -4,16 +4,16 @@
 using namespace std;
 
 
-void Document::afficher(void) //definition de la methode afficher
+void Document::afficher() //definition de la methode afficher
 {
-	//string monTexte="Fichier affiché, maintenant vous pouvez lancez votre chapeau et crier : yahou !!";
-	cout << monTexte << endl; // Affichage de la chaîne monTexte
+	//on affiche le contenu de la variable en utilisant la méthode ncurses
+	printw(monTexte.c_str()); // Affichage de la chaîne monTexte avec convertion
 };
 
 
 void Document::load(string fichier)
 {
-	//On définit un flux de lecture "monFlux" avec le nom de fichier passé en argument (on utilise "._str()" sinon ça passe pas) 
+	//On définit un flux de lecture "monFlux" avec le nom de fichier passé en argument (on utilise ".c_str()" sinon ça passe pas) 
 	ifstream monFlux(fichier.c_str());
 	
 	//On test que le fichier existe bien
@@ -29,6 +29,6 @@ void Document::load(string fichier)
 	}
 	else
 	{
-		cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
+		printw("ERREUR: Impossible d'ouvrir le fichier en lecture.");
 	}
 }

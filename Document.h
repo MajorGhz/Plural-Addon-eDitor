@@ -2,6 +2,7 @@
 #include <iostream>	//pour cin/cout
 #include <fstream> 	//pour écrire/lire des fichiers
 #include <string>	//pour les strings
+#include <ncurses.h>
 
 class Document
 {
