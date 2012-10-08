@@ -4,14 +4,32 @@
 using namespace std;
 
 
-void Document::afficher() //definition de la methode afficher
-{
+void Document::afficher(int row, int ypos, int col) //definition de la methode afficher
+{	
+	clear();
+	attron(A_REVERSE);
+	for (int i=0; i<col;++i)
+	{
+		move(0,i);
+		printw(" ");
+	}
+	move(0,(col/2)-2);
+	printw("PÀÉÇD");
+	attroff(A_REVERSE);
 	//on affiche le contenu de la variable en utilisant la méthode ncurses
-	printw(monTexte.c_str()); // Affichage de la chaîne monTexte avec convertion
+	for (int i=0;i<(row-2);++i)
+	{
+	move(i+1,0);
+	printw(monTexte[i+ypos].c_str()); // Affichage de la chaîne monTexte avec convertion
+	//printw(monTexte[ypos].c_str()); 
+	}
+	move(row-1,0);
+	printw("%d %d",row,ypos);
+	refresh();
 };
 
 
-void Document::load(string fichier)
+void Document::load(string fichier, int col)
 {
 	//On définit un flux de lecture "monFlux" avec le nom de fichier passé en argument (on utilise ".c_str()" sinon ça passe pas) 
 	ifstream monFlux(fichier.c_str());
@@ -20,12 +38,31 @@ void Document::load(string fichier)
 	if(monFlux)
 	{
 	//Tout est prêt pour la lecture
-		string ligne;     //Une variable pour stocker les lignes lues
-		while(getline(monFlux, ligne))    //Tant qu'on n'est pas a la fin, on lit
-		{
+		//string ligne;     //Une variable pour stocker les lignes lues
+		//while(getline(monFlux, ligne))    //Tant qu'on n'est pas a la fin, on lit
+		//{
 			//On ajoute chaque ligne a notre variable string monTexte de la classe Document
-			monTexte += ligne + '\n' ;
+		//	monTexte += ligne + '\n' ;
+		//}
+		char c;
+		int Nbr=0;
+		int Lin=0;
+		while(monFlux.get(c))
+		{
+		
+			
+			
+				
+			monTexte[Lin] += c;
+			Nbr++;
+			if (c == 10 || Nbr == col )
+				{
+				Nbr=0;
+				Lin++;
+					
+				}
 		}
+		
 	}
 	else
 	{

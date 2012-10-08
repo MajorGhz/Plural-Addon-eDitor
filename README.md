@@ -5,31 +5,31 @@ Description
 ===========
 
 PAD est un éditeur de texte simple léger et modulable.
-Sont but est de proposer un éditeur fiable et qui s'adapte a l'utilisateur,
-ce n'est pas a l'utilisateur de s'adapter à un éditeur pour être productif.
+Son but est de proposer un éditeur fiable et qui s'adapte à l'utilisateur,
+ce n'est pas à l'utilisateur de s'adapter à un éditeur pour être productif.
 
-Dans ca premier monture il sera utilisable dans la console tty ou tout emulateur de termimaux.
-Un version GTK est a l'étude mais pas a l'ordre du jour.
+Dans sa première monture il sera utilisable dans la console tty ou tout émulateur de terminaux.
+Un version GTK est à l'étude mais pas à l'ordre du jour.
 
-Il est orienté autour d'un code permettant l'ajout de plugin pour divers fonctions tel les raccourcis clavier ou la colorisation syntaxique.
-Il est programmer dans un language orienté objet, le C++
+Il est orienté autour d'un code permettant l'ajout de plugins pour diverses fonctions telles les raccourcis clavier ou la colorisation syntaxique.
+Il est programmé dans un langage orienté objet, le C++
 
-De mombreuse fonctionnalité vairons le jour des qu'il sera utilisable
+De nombreuses fonctionnalités verront le jour dès qu'il sera utilisable.
 
 Histoire
 ========
 
-PAD est née de la rencontre de deux personnes souhaite apprendre le C++, 
+PAD est née de la rencontre de deux personnes souhaitant apprendre le C++, 
 le but été de trouvé un projet pour mettre en pratique la technique de l'express programming,
-la programmation en binome ou plus, dans un cadre virtuel tel que le net.
+la programmation en binôme ou plus, dans un cadre virtuel tel que le net.
 
-Il a vue le jour en Octobre 2012
+Il a vu le jour en octobre 2012
 
 Systèmes supportés
 ==================
 
-Pour l'instant il n'est utilisable que sour GNU/Linux.
-Avis a tout coutributeur pour le testé sur d'autre platforme.
+Pour l'instant il n'est utilisable que sous GNU/Linux.
+Avis à tout contributeur pour le tester ou porter sur d'autres plateformes.
 
 Installation
 ============

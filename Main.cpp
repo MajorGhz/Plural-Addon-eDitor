@@ -2,17 +2,20 @@
 
 using namespace std;
 
+int row,col; //variables globales pour l'écran qui vont être utilisées dans plusieurs fonctions
 
 void InitScreen()
 {
 	// Initialisation d'un écran ncurses
 	initscr();
+	keypad(stdscr, TRUE);	//pour avoir Fn et les fleches
+	getmaxyx(stdscr,row,col);
+	
 }
 
 void CloseScreen()
 {
 	// On  actualise et quite proprement au niveau de ncurses
-	getch();
 	refresh();
 	endwin();
 }
@@ -23,6 +26,8 @@ int main(int argc, char* argv[])
 	// declaration d'un document editable sous la classe Document 
 	Document docEnCours;
 	
+	int ypos=0; // pour le curseur
+	
 	// vérifie qu'un nom de fichier a bien été donné 
 	if (argc == 1)
 	{	
@@ -31,8 +36,26 @@ int main(int argc, char* argv[])
 	else
 	{
 		InitScreen();
-		docEnCours.load(argv[1]);
-		docEnCours.afficher();
+		docEnCours.load(argv[1], col);
+		int c;
+		do
+		{
+		docEnCours.afficher(row,ypos,col);
+			switch(c=getch())
+			{
+				case KEY_UP:
+					(ypos==0) ? ypos=0 : ypos-- ;
+					break;
+				case KEY_DOWN:
+					ypos++;
+					break;
+					
+					
+				case KEY_LEFT:
+					continue;
+			}
+		
+		}while(true);
 		CloseScreen();
 	}
 
