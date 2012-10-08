@@ -20,7 +20,7 @@ Histoire
 ========
 
 PAD est né de la rencontre de deux personnes souhaitant apprendre le C++, 
-le but été de trouvé un projet pour mettre en pratique la technique de l'express programming,
+le but était de trouver un projet pour mettre en pratique la technique de l'express programming,
 la programmation en binôme ou plus, dans un cadre virtuel tel que le net.
 
 Il a vu le jour en octobre 2012
