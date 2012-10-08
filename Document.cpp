@@ -14,7 +14,7 @@ void Document::afficher(int row, int ypos, int col) //definition de la methode a
 		printw(" ");
 	}
 	move(0,(col/2)-2);
-	printw("PÀÉÇD");
+	printw("PAD");
 	attroff(A_REVERSE);
 	//on affiche le contenu de la variable en utilisant la méthode ncurses
 	for (int i=0;i<(row-2);++i)
