@@ -7,6 +7,7 @@ using namespace std;
 void Document::afficher(int row, int ypos, int col) //definition de la methode afficher
 {	
 	clear();
+	//Affichage d'une bande blanche en haut pour le futur menu 
 	attron(A_REVERSE);
 	for (int i=0; i<col;++i)
 	{
@@ -21,7 +22,6 @@ void Document::afficher(int row, int ypos, int col) //definition de la methode a
 	{
 	move(i+1,0);
 	printw(monTexte[i+ypos].c_str()); // Affichage de la chaîne monTexte avec convertion
-	//printw(monTexte[ypos].c_str()); 
 	}
 	move(row-1,0);
 	printw("%d %d",row,ypos);
