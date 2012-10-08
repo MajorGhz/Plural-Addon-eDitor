@@ -1,5 +1,5 @@
 README pour PAD en français 
-( Plurial Addons eDitor )
+( Plural Addons eDitor )
 
 Description
 ===========
@@ -19,7 +19,7 @@ De nombreuses fonctionnalités verront le jour dès qu'il sera utilisable.
 Histoire
 ========
 
-PAD est née de la rencontre de deux personnes souhaitant apprendre le C++, 
+PAD est né de la rencontre de deux personnes souhaitant apprendre le C++, 
 le but été de trouvé un projet pour mettre en pratique la technique de l'express programming,
 la programmation en binôme ou plus, dans un cadre virtuel tel que le net.
 
