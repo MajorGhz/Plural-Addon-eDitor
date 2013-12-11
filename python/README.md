@@ -1,4 +1,4 @@
-README pour PAD en français 
+README pour PAD en français
 ( Plural Addons eDitor )
 
 Description
@@ -12,14 +12,14 @@ Dans sa première monture il sera utilisable dans la console tty ou tout émulat
 Un version GTK est à l'étude mais pas à l'ordre du jour.
 
 Il est orienté autour d'un code permettant l'ajout de plugins pour diverses fonctions telles les raccourcis clavier ou la colorisation syntaxique.
-Il est programmé dans un langage orienté objet, le C++
+Il est programmé dans un langage orienté objet, python3.
 
 De nombreuses fonctionnalités verront le jour dès qu'il sera utilisable.
 
 Histoire
 ========
 
-PAD est né de la rencontre de deux personnes souhaitant apprendre le C++, 
+PAD est né de la rencontre de deux personnes souhaitant apprendre le python,
 le but était de trouver un projet pour mettre en pratique la technique de l'express programming,
 la programmation en binôme ou plus, dans un cadre virtuel tel que le net.
 
@@ -34,11 +34,10 @@ Avis à tout contributeur pour le tester ou porter sur d'autres plateformes.
 Installation
 ============
 
-compilation :
-$ make
+
 
 utilisation :
-$ ./pad
+$ python3 main.py
 
 Documentation
 =============
